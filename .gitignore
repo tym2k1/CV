@@ -7,3 +7,11 @@ devenv.local.nix
 
 # pre-commit
 .pre-commit-config.yaml
+
+# LaTex output files
+src/CV.aux
+src/CV.dvi
+src/CV.log
+src/CV.out
+src/CV.pdf
+src/texput.log
