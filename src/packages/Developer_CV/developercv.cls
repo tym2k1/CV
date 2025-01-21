@@ -34,7 +34,7 @@
 
 \setlength{\parindent}{0mm} % Suppress paragraph indentation
 
-\usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
+\usepackage[breaklinks=true,hidelinks]{hyperref} % Required for links but hide the default boxes around links
 
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
 
