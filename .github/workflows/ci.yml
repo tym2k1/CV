@@ -1,0 +1,32 @@
+name: Compile CV and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_release:
+    if: contains(github.event.head_commit.message, '[compile-cv]')
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up date
+      id: date
+      run: echo "RELEASE_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Compile CV
+      run: |
+        docker run --rm -v $(pwd):/workdir texlive/texlive pdflatex src/CV.tex
+
+    - name: Create Release and Upload PDF
+      run: |
+        gh release create "latest" CV.pdf --title "Latest CV" --notes "This release contains the latest update from ${{ env.RELEASE_DATE }}." --draft=false --prerelease=false
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
