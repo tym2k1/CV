@@ -19,7 +19,7 @@
 % PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[9pt]{./packages/Developer_CV/developercv}
+\documentclass[9pt]{./src/packages/Developer_CV/developercv}
 \usepackage{amssymb}
 \usepackage{fontawesome}
 \usepackage{enumitem}
@@ -39,9 +39,9 @@
     \setlength{\fboxsep}{0pt} % Removes the gap between the image and the border
     \setlength{\fboxrule}{3pt} % Add border
     \ifpdf
-        \fbox{\includegraphics[width=\linewidth]{photo_square.jpg}}
+        \fbox{\includegraphics[width=\linewidth]{./src/img/photo_square.jpg}}
     \else
-        \fbox{\includegraphics[width=\linewidth,natwidth=810,natheight=810]{photo_square.jpg}}
+        \fbox{\includegraphics[width=\linewidth,natwidth=810,natheight=810]{./src/img/photo_square.jpg}}
     \fi
 \end{minipage}
 \hspace{1.5pt} % Adjust this to remove space caused by the fbox
