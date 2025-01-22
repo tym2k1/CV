@@ -25,6 +25,12 @@ jobs:
       run: |
         docker run --rm -v $(pwd):/workdir texlive/texlive pdflatex src/CV.tex
 
+    - name: Delete existing release with tag "latest" (if any)
+      run: |
+        gh release delete latest -y --cleanup-tag || true
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Create Release and Upload PDF
       run: |
         gh release create "latest" CV.pdf --title "Latest CV" --notes "This release contains the latest update from ${{ env.RELEASE_DATE }}." --draft=false --prerelease=false
