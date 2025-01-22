@@ -8,12 +8,31 @@ Feel free to use this repo to create your own CV.
 Based on the [Developer CV template by Jan Vorisek/Jan Küster/Vel](http://www.latextemplates.com/template/developer-cv).
 Kudos to them.
 
-## Prerequisites
+To access the newest CV go to [releases page](https://github.com/tym2k1/CV/releases/tag/latest)
 
-This repo was developed using [devenv](https://devenv.sh/) which automates
-creation of the development environment on per-project basis. Alternatively
-the `texlive/texlive` docker image that's used in the CI might be worth taking
-a look.
+## Working with LaTeX
+
+### devenv
+
+This repo was developed using [devenv](https://devenv.sh/) to manage dependencies
+
+To start the shell with all neccessary requirements run:
+
+```sh
+devenv shell
+```
+
+Or use below command to let devenv automatically start when
+entering the cloned repo directory:
+
+```sh
+direnv allow
+```
+
+### docker
+
+Alternatively the `texlive/texlive` docker might be used to work
+with LaTeX.
 
 ## How to use
 
@@ -33,15 +52,28 @@ okular:
 okular CV.dvi
 ```
 
+When using the `texlive/texlive` docker image you can run the `latex` command in
+the following way
+
+```sh
+docker run --rm -v $(pwd):/workdir texlive/texlive latex src/CV.tex
+```
+
 ### Export to PDF
 
 To directly export the CV to PDF, use:
 
 ```sh
-pdflatex CV.tex
+pdflatex src/CV.tex
 ```
 
 This will generate a PDF version of your CV that you can easily share or print.
+
+Similarly to use docker you can run:
+
+```sh
+docker run --rm -v $(pwd):/workdir texlive/texlive pdflatex src/CV.tex
+```
 
 ## Contact
 
