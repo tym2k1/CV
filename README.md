@@ -8,7 +8,7 @@ Feel free to use this repo to create your own CV.
 Based on the [Developer CV template by Jan Vorisek/Jan Küster/Vel](http://www.latextemplates.com/template/developer-cv).
 Kudos to them.
 
-To access the newest CV go to [releases page](https://github.com/tym2k1/CV/releases/tag/latest)
+To see my most up-to-date resume go to [releases page](https://github.com/tym2k1/CV/releases/tag/latest).
 
 ## Working with LaTeX
 
