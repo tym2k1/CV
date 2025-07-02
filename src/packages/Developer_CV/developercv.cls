@@ -50,8 +50,8 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.75cm, % Top margin
-	bottom=1.75cm, % Bottom margin
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
 	left=2cm, % Left margin
 	right=2cm, % Right margin
 	headheight=0.75cm, % Header height
@@ -178,27 +178,23 @@
 %	ENTRY LIST
 %----------------------------------------------------------------------------------------
 
-\usepackage{longtable} % Required for tables that span multiple pages
-\setlength{\LTpre}{0pt} % Remove default whitespace before longtable
-\setlength{\LTpost}{0pt} % Remove default whitespace after longtable
-
-\setlength{\tabcolsep}{0pt} % No spacing between table columns
-
-% Environment to hold a new list of entries
 \newenvironment{entrylist}{
-	\begin{longtable}[H]{l l}
-}{
-	\end{longtable}
+\vspace{-1em}
+  \begin{flushleft}
+}
+{
+  \vspace{-1em}
+  \end{flushleft}
 }
 
-\newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	&\parbox[t]{1\textwidth}{% 82.5% of the text width of the page
-		\textbf{#2}% Entry heading text
-		\hfill% Horizontal whitespace
-		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
-		{\footnotesize \textbf{\textcolor{black}{#1}}}\\ % Date(s) text
-		#4 % Entry description text
-	}\\\\}
+\newcommand{\entry}[4]{%
+  \textbf{#2} \hfill {\footnotesize \textbf{\textcolor{black}{#3}}}\par
+  \vspace{0.1em}
+  {\footnotesize \textbf{\textcolor{black}{#1}}}\par
+  \vspace{0.3em}
+  #4
+  \vspace{1em}
+}
 
 % Command to output a separator slash between lists, e.g. '  /  '
 \newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
