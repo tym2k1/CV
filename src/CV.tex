@@ -52,7 +52,7 @@
     \icon{Linkedin}{8}{\href{https://www.linkedin.com/in/tymoteusz-burak/}{linkedin.com/in/tymoteusz-burak}}\\
 
 \end{minipage}
-\\ \\
+\\
 
 %----------------------------------------------------------------------------------------
 % INTRODUCTION, SKILLS AND TECHNOLOGIES
@@ -62,17 +62,18 @@
 \noindent % Prevents indentation
 \begin{minipage}[t]{0.60\textwidth} % 45% of the page width for the introduction text
     \cvsect{Who Am I?}
-
     \raggedright
 
-    A recent graduate with a passion for innovation, engineering and
-    problem-solving. I am eager to pursue a career in research and development (R\&D),
-    where I can contribute to fostering innovation and further my
-    technical skills.
+    A low-level enthusiast with a strong drive for engineering,
+    innovation, and problem-solving. I am pursuing a career in research and
+    development (R\&D), with a focus on critical embedded systems.
 
-    Thriving in collaborative environments, I enjoy brainstorming and working in
-    a team, where exchanging ideas and leveraging collective strengths leads to
-    creative solutions.
+    I love hard problems, working in a team, and keeping things relaxed.
+    I especially enjoy spaces where I can dive deep into creative technical work
+    with a team like in hackathons.
+
+    Beyond engineering, I’m drawn to experimental, math-driven art, occasionally
+    exploring algorithmic approaches to music and design, when time allows.
 
 \end{minipage}
 \hfill % Horizontal space between the minipages
@@ -87,8 +88,10 @@
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{Python}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{Docker}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{Nix}}}}
+    \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{Zephyr}}}}
+    \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{C}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{CI/CD (Github/Gitea Actions)}}}}
-    \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{C/C++}}}}
+    \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{C++}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{Buildroot}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{MATLAB}}}}
     \colorbox{black}{\textcolor{white}{\raisebox{0.5ex}[10pt][0pt]{\textbf{LabVIEW}}}}
@@ -104,13 +107,19 @@
 
 \begin{entrylist}
     \entry
+        {2025 -- Present}
+        {Master of Science in Aerospace Informatics}
+        {Julius-Maximilians-Universität Würzburg, Germany}
+        {
+        }
+    \entry
         {2020 -- 2024}
         {Bachelor of Engineering in Automation, Robotics and Control Systems}
-        {Gdańsk University of Technology}
+        {Gdańsk University of Technology, Poland}
         {
-        \raggedright
-        Thesis:\\
-        \textit{Intelligent system for the analysis of a human skeletal model
+        Thesis:\\[0.1em]
+        \textit{
+        Intelligent system for the analysis of a human skeletal model
         in 3D space to support medical diagnosis, rehabilitation and physical
         activity.}
         }
@@ -123,26 +132,40 @@
 \cvsect{Experience}
 
 \begin{entrylist}
-
+    \raggedright % Align to left as possible
     \entry
-    {06/2023--Present}
-    {Junior Embedded Systems Engineer}
-    {3mdeb Sp. z o. o., Gdańsk}
+    {02/2025--Present}
+    {Research Assistant}
+    {Chair of Software Engineering - \href{https://se.informatik.uni-wuerzburg.de/en/secure-software-systems-group/}{Secure Software Systems Group}, University of Würzburg, Germany}
     {
-    Working on the Embedded Systems team, I gained hands-on experience across various software engineering areas, including DevOps, code development, and conducting product research. The role also offered opportunities to contribute to collaborative projects while further enhancing my technical expertise.
+        Joined the \href{https://se.informatik.uni-wuerzburg.de/en/secure-software-systems-group/}{Secure Software Systems Group} as a salaried Research Assistant (TV-L), while pursuing my Master’s degree, continuing technical contributions to the \href{https://crosscon.eu/}{CROSSCON Project (Cross-platform Open Security Stack for Connected Devices)} following my prior industry work on the same initiative. The role entails greater responsibility and duties beyond those of student assistants (HiWis).
     \begin{enumerate}
-        \raggedright
-    \item[$\blacksquare$] Development of custom Linux distributions and firmware for embedded applications using Yocto/Buildroot/OpenWRT, with some of this work contributing into the \href{https://docs.zarhus.com/}{Zarhus OS, a custom Linux distro.}.
+        \item[$\blacksquare$] Contributing to technical deliverables of the \href{https://crosscon.eu/}{CROSSCON Project}.
+    \begin{enumerate}
+    \item[$\blacksquare$] Implemented a Zero-Knowledge PUF-based authentication trusted service on a static-partitioning hypervisor (Bao/CROSSCON Hypervisor) for Arm Cortex-M (LPC55S69), using Zephyr RTOS as isolated "VMs". Built upon prior cryptographic design to deliver a working proof-of-concept demonstrating potential GlobalPlatform compliance for this architecture.
+    \end{enumerate}
+        \item[$\blacksquare$] Collaborating with student assistants (HiWis), delegating tasks, conducting code reviews, and providing guidance in embedded systems development and software engineering best practices.
+        \item[$\blacksquare$] Supervising cybersecurity-related seminar topics.
+    \end{enumerate}
+    }
+    \entry
+    {06/2023--02/2025}
+    {Junior Embedded Systems Engineer}
+    {3mdeb Sp. z o. o., Gdańsk, Poland}
+    {
+    Worked on the Embedded Systems team with a focus on Linux firmware development for hardened secure targets and implementing emerging technologies such as FIDO Device Onboarding, fTPM, Measured Boot, and secure OTA updates.
+    \begin{enumerate}
+        \item[$\blacksquare$] Developed custom Linux distributions using Yocto, Buildroot, and OpenWRT, including work on the \href{https://docs.zarhus.com/}{Zarhus OS}.
         \begin{enumerate}
-            \item[$\blacksquare$] Integrated enhanced security features, such as including Measured Boot, FIDO Device Onboarding, and OTA updates, by leveraging and contributing to existing open-source projects.
+            \item[$\blacksquare$] Worked on board support packages and device tree configurations for embedded targets.
             \item[$\blacksquare$] Developed test cases, CI/CD pipelines and documentation.
+            \item[$\blacksquare$] Contributed patches and improvements to upstream open-source projects as part of integration efforts.
         \end{enumerate}
-        \item[$\blacksquare$] Contributing to the ongoing \href{https://crosscon.eu/}{Cross-platform Open Security Stack for Connected Devices (CROSSCON) Project}:
+        \item[$\blacksquare$] Contributed to the \href{https://crosscon.eu/}{CROSSCON Project (Cross-platform Open Security Stack for Connected Devices)}:
         \begin{enumerate}
-            \item[$\blacksquare$] Co-authored and reviewed validation criteria for the project's technical stack, ensuring compliance with project objectives and industry standards.
-            \item[$\blacksquare$] Collaboratively developed high-level architecture for practical use-cases to test real-world applications, contributing to both conceptual design, implementation planning, and prototyping.
-            \item[$\blacksquare$] Prepared internal reports on the project's substantive progress, identifying key deliverables and deriving actionable recommendations for the team.
-            \item[$\blacksquare$] Authored a blog post: \href{https://crosscon.eu/blog/embracing-ftpm-embedded-arm-devices-insights-and-solutions}{\textit{Embracing fTPM on embedded ARM Devices: Insights and Solutions}}.
+            \item[$\blacksquare$] Co-developed validation criteria and high-level architecture for embedded security use-cases.
+            \item[$\blacksquare$] Participated in implementation planning, prototyping, and reporting on project milestones.
+            \item[$\blacksquare$] Authored blog post: \href{https://crosscon.eu/blog/embracing-ftpm-embedded-arm-devices-insights-and-solutions}{\textit{Embracing fTPM on Embedded ARM Devices}}.
         \end{enumerate}
         \item[$\blacksquare$] Public speaking:
         \begin{enumerate}
@@ -156,20 +179,19 @@
     \entry
         {05/2021--06/2023}
         {Science Club Member}
-        {SimLE Science Club}
+        {SimLE Science Club, Gdańsk, Poland}
         {
             Participated in the Science Club’s \href{https://simle.pl/en/projekty/silverhand/}{"Silverhand"} project, contributing to the second iteration of a prosthetic hand,, and later moved on to the \href{https://simle.pl/en/projekty/simba/}{"SimBa"} sounding rocket project, working within the ground segment team.
         \begin{enumerate}
-            \item[$\blacksquare$] Collaborated on bare-metal software for a prosthetic hand using C++ and STM32 microcontroller.
+            \item[$\blacksquare$] Collaborated on a prosthetic hand firmware using an STM32-based platform.
             \item[$\blacksquare$] Worked on designing and implementing the backend for a ground control module of a sounding rocket, using Python, InfluxDB, and Mavlink.
             \item[$\blacksquare$] Prototyped an automated motorized radio antenna and camera mount for rocket tracking, leveraging Python and OpenCV.
         \end{enumerate}
         }
-
     \entry
         {03/2021--11/2021}
         {Technical Support and Junior Vision Systems Engineer}
-        {VisionX, Gdańsk}
+        {VisionX, Gdańsk, Poland}
         {
         I initially provided general technical support and later transitioned into prototyping industrial vision systems.
         \begin{enumerate}
@@ -180,7 +202,7 @@
                 \item[$\blacksquare$] Onion rotation detection for food manufacturing.
                 \item[$\blacksquare$] Software blueprint for PCB inspections.
             \end{enumerate}
-            \item[$\blacksquare$] Collaborated on a QR/Datamatrix reading scanner in C++ and STM32 platform.
+            \item[$\blacksquare$] Collaborated on the development of a QR/Datamatrix code scanner using an STM32-based platform.
         \end{enumerate}
         }
     \end{entrylist}
@@ -188,6 +210,8 @@
 %----------------------------------------------------------------------------------------
 % ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
+
+\vfill
 
 \begin{minipage}[t]{0.5\textwidth}
     \cvsect{Languages}
