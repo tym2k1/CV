@@ -12,27 +12,9 @@ To see my most up-to-date resume go to [releases page](https://github.com/tym2k1
 
 ## Working with LaTeX
 
-### devenv
-
-This repo was developed using [devenv](https://devenv.sh/) to manage dependencies
-
-To start the shell with all neccessary requirements run:
-
-```sh
-devenv shell
-```
-
-Or use below command to let devenv automatically start when
-entering the cloned repo directory:
-
-```sh
-direnv allow
-```
-
 ### docker
 
-Alternatively the `texlive/texlive` docker might be used to work
-with LaTeX.
+The `texlive/texlive` docker might be used to work with LaTeX.
 
 ## How to use
 
