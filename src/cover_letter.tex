@@ -1,0 +1,98 @@
+%----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{./src/packages/Developer_CV/developercv}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{ifpdf}
+\graphicspath{ {./img/} }
+\usepackage{datetime}
+\usepackage{lipsum}
+\newdateformat{easyreaddate}{\monthname[\the\month] \the\day, \the\year}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% COVER LETTER FUNCTIONS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\coverletterheader}[5]{%
+  \noindent
+  \begin{minipage}[t]{0.5\textwidth}
+    #1  % Your name
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\textwidth}
+   \raggedleft \easyreaddate\today
+  % Date
+  \end{minipage} \\
+  #2 \\  % Recipient name
+  #3 \\  % Company
+  #4 \\  % Street
+  #5     % City
+}
+
+%----------------------------------------------------------------------------------------
+% PHOTO, NAME, CONTACT
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.15\textwidth} % 30% of the page width for photo
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    \raggedright % Align to left as possible
+    \setlength{\fboxsep}{0pt} % Removes the gap between the image and the border
+    \setlength{\fboxrule}{3pt} % Add border
+    \ifpdf
+        \fbox{\includegraphics[width=\linewidth]{./src/img/photo_square.jpg}}
+    \else
+        \fbox{\includegraphics[width=\linewidth,natwidth=810,natheight=810]{./src/img/photo_square.jpg}}
+    \fi
+\end{minipage}
+\hspace{1.5pt} % Adjust this to remove space caused by the fbox
+\begin{minipage}[t]{0.49\textwidth} % 45% of the page width for name
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Tymoteusz}}}}} % First name
+
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Burak}}}}} % Last name
+
+    \vspace{6pt}
+
+    \hspace{1.5pt} % Adjust this to align with top text
+    {\huge Embedded Systems Engineer} % Career or current job title
+
+\end{minipage}
+\begin{minipage}[t]{0.35\textwidth} % 35% of the page width for the first row of icons
+    %\vspace{-\baselineskip} % Required for vertically aligning minipages
+    \raggedright % Align to left as possible
+
+    % START SUBSTITUTE
+    \icon{MapMarker}{8}{\rule{10em}{1em}}\\
+    \icon{Phone}{8}{+\rule{2em}{1em} \rule{9em}{1em}}\\
+    % END SUBSTITUTE
+    \icon{At}{8}{\href{mailto:tymbur@gmail.com}{tymbur@gmail.com}}\\
+    \icon{Github}{8}{\href{https://github.com/tym2k1}{github.com/tym2k1}}\\
+    \icon{Linkedin}{8}{\href{https://www.linkedin.com/in/tymoteusz-burak/}{linkedin.com/in/tymoteusz-burak}}\\
+
+\end{minipage}
+\fontsize{12pt}{18pt}\selectfont
+
+\vspace{\baselineskip}
+
+\coverletterheader
+  {Joe Doe}
+  {Hiring Manager}
+  {CoolCompany4CoolKids}
+  {Sesame Street 123}
+  {Sosnowiec}
+
+\vspace{\baselineskip}
+Dear Mr. Doe
+
+\vspace{\baselineskip}
+\lipsum[1-3]
+
+\vspace{\baselineskip}
+Yours sincererly, \\
+Tymoteusz Burak
+
+\end{document}

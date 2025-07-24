@@ -1,7 +1,7 @@
 # LaTex output files
-CV.aux
-CV.dvi
-CV.log
-CV.out
-CV.pdf
+*.aux
+*.dvi
+*.log
+*.out
+*.pdf
 texput.log
